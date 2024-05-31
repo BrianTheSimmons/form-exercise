@@ -4,24 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Exercise</title>
+  <style>
+    label.block {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <form action="#">
     <!-- Email Input -->
-    <label for="email">Email: </label>
+    <label for="email" class="block">Email: </label>
     <input type="email" name="email" id="email">
+
     <!-- Password Input -->
-    <label for="password">Password: </label>
+    <label for="password" class="block">Password: </label>
     <input type="password" name="password" id="password">
+
     <!-- Github Username Input -->
-    <label for="username">Github Username: </label>
+    <label for="username" class="block">Github Username: </label>
     <input type="text" id="username">
+
     <!-- Radio Buttons -->
-    <input type="radio" name="version" id="enterprise">
-    <input type="radio" name="version" id="pro">
-    <input type="radio" name="version" id="free">
+    <div class="radios">
+      <div class="radio-group">
+        <label for="enterprise">Enterprise</label>
+        <input type="radio" name="version" id="enterprise" value="enterprise">
+      </div>
+
+      <div class="radio-group">
+        <label for="pro">Pro</label>
+        <input type="radio" name="version" id="pro" value="pro">
+      </div>
+
+      <div class="radio-group">
+        <label for="free">Free</label>
+        <input type="radio" name="version" id="free" value="free">
+      </div>
+    </div>
+
     <!-- Checkbox -->
-    <input type="checkbox" name="rememberMe" id="rememberMe">
+    <label for="rememberMe" class="block">Remember Me</label>
+    <input type="checkbox" name="rememberMe" id="rememberMe" value="remember">
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Me!</button>
   </form>
 </body>
 </html>
